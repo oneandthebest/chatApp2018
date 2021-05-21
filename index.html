@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <link href="https://fonts.googleapis.com/css?family=Alegreya+SC|Megrim|Quicksand|Ubuntu" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    <div id="sidebar" class="hsidebar">
+        <center>
+        <img src="https://api.sololearn.com/Uploads/Avatars/14174430.jpg" id="large-dp" onclick="profile('14174430')" onerror="errpic(this)">
+        <div id="hr"></div>
+        </center><br>
+        <div id="li">
+            <i class="fa fa-users" id="fa"></i> Contacts
+        </div><br>
+        <div id="li">
+            <i class="fa fa-star" id="fa"></i> Starred Messages
+        </div><br>
+        <div id="li" onclick="profile('14174430')">
+            <i class="fa fa-user" id="fa"></i> View Profile
+        </div><br>
+        <div id="li">
+            <i class="fa fa-cog" id="fa"></i> Settings
+        </div><br>
+        <div id="hr"></div><br>
+        <div id="li" onclick="alert('Please share my code with others... 🙃')">
+            <i class="fa fa-user-plus" id="fa"></i> Invite a friend
+        </div><br>
+        <div id="li" onclick="alert('Hey!!! This is a simple chatting app (basically clone) created by me (for sure) ! 🙃\n\nFeatures:\n♧ Check profile by clicking on dp (shows some correct data from sololearn profile)\n♧ Some readymade funny texts (most of them not made up, I mean we really had that conversation at a time)\n♧ Clear chat by clicking on the three dots on the top right corner and then clicking on clear chat option\n♧ Send your own texts using the text box and send button, use !n in the beginning to see the msg being sent by the user you are texting and do not forget to leave a space after !n (the texts you send will be removed once you exit from the section and only the default readymade texts will remain)\n♧ Search your contact list by using the Search contacts text box.')">
+            <i class="fa fa-question-circle" id="fa"></i> Help
+        </div><br>
+        <div id="li" onclick="alert('Share your views in the comment section! 🙃')">
+            <i class="fa fa-heart" id="fa"></i> Rate App
+        </div><br>
+    </div>
+    <div id="bg" onclick="sidebar('550')" class="hide"></div>
+        <div id="heading">
+            <div id="left">
+                <i class="fa fa-bars" onclick="sidebar('0')"></i>
+            </div>
+            <div id="title">Chatting App</div>
+        <div id="right">
+            <img src="https://api.sololearn.com/Uploads/Avatars/14174430.jpg" id="dp" onclick="profile('14174430')" onerror="errpic(this)">
+        </div>
+        </div>
+        </div>
+        <center>
+        <input type="text" id="search" placeholder="Search contacts" oninput="search()">
+        </center>
+        <div id="contacts">
+        </div>
+        <div id="profile" class="hide">
+        <div id="heading">
+        <i class="fa fa-arrow-left" onclick="document.getElementById('profile').scrollTop=0;document.getElementById('profile').classList.add('hide');document.getElementsByTagName('body')[0].classList.toggle('disablescroll')"></i><b>Profile</b><div id="right"><img src="" id="dp" class="smallpic" style="cursor:default"></div>
+        </div>
+        <center>
+            <img src="" id="prof-pic" width="40%" height="40%">
+            </center>
+            <div id="info">
+            <div id="username" class="info"></div>
+            <div class="label">Username</div><br>
+            <div id="lvl" class="info"></div>
+            <div class="label">Current Level</div><br>
+            <div id="xp" class="info"></div>
+            <div class="label">Total XP</div><br>
+            <div id="badges" class="info"></div>
+            <div class="label">Number of Badges earned</div><br>
+            <div id="codes" class="info"></div>
+            <div class="label">Number of Codes</div><br>
+            <div id="courses" class="info"></div>
+            <div class="label">Number of Courses completed</div><br>
+            <div id="prof-link" class="info"></div>
+            <div class="label">Profile link</div>
+            </div><br>
+        </div>
+        <div id="chat-sec" class="hide">
+        <div id="heading">
+            <div id="left">
+                <i class="fa fa-arrow-left" onclick="document.getElementById('chat-sec').scrollTop=0;document.getElementById('chat-sec').classList.add('hide');document.getElementById('messages').innerHTML='';document.getElementById('messages').scrollTo(0,0);document.getElementsByTagName('body')[0].classList.toggle('disablescroll');document.getElementById('options').classList.remove('options')"></i>
+                <img src="" id="dp" class="whosedp" onerror="errpic(this)"><span class="whosename"></span>
+            </div>
+            <div id="right">
+                <i class="fa fa-ellipsis-h" onclick="document.getElementById('options').classList.toggle('options')" style="cursor:pointer;-webkit-tap-highlight-color:transparent ;"></i>
+                <div id="options" onclick="document.getElementById('messages').innerHTML='';document.getElementById('options').classList.toggle('options')" style="cursor:pointer;-webkit-tap-highlight-color:transparent ;">
+            Clear Chat
+        </div>
+            </div>
+            </div>
+        <input type="text" placeholder="Type Message" id="msgval">
+        <button id="send" onclick="sendmsg()" style="cursor:pointer;-webkit-tap-highlight-color:transparent ;">&#10148</button>
+        <div id="messages">
+            
+        </div>
+        </div>
+        </div>
+        <div id="cont-loading">
+            <div id="spin"></div>
+        </div>
+        <div id="loading">
+            <i class="fa fa-comment-dots"></i>
+        </div>
+    </body>
+    <script src="index.js"></script>
+</html>

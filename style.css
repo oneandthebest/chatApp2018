@@ -1,0 +1,359 @@
+body {
+    margin:0;
+    background:#f9f9fd;
+    font-family:quicksand;
+    overflow-wrap:break-word;
+}
+.disablescroll{
+    height:100vh;
+    overflow:hidden;
+}
+#sidebar{
+    width:75vw;
+    height:100vh;
+    background:#f9f9fd;
+    z-index:4;
+    position:fixed;
+    display:block;
+    overflow-y:scroll;
+    transition:0.5s;
+}
+#bg{
+    position:fixed;
+    height:100vh;
+    width:100vw;
+    background:rgba(0,0,0,0.5);
+    z-index:3;
+}
+#heading{
+    height:70px;
+    width:100vw;
+    background:#fff;
+    box-shadow:0 0 10px 0 rgba(0,0,0,0.3);
+    display:flex;
+    flex-wrap:nowrap;
+    justify-content:center;
+    align-items:center;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:2;
+}
+#title>div{
+    display:inline-block ;
+}
+#title{
+    font-weight:bold;
+    font-size:22.5px;
+    width:60vw;
+    text-align:center;
+}
+#left,#right{
+    width:20vw;
+    text-align:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+#right{
+    margin-left:auto;
+}
+.fa-bars{
+    font-size:27.5px;
+    color:#07f;
+    cursor:pointer;
+    -webkit-tap-highlight-color:transparent ;
+}
+input[type="text"]{
+    background:#fff;
+    border:0.5px solid #eee;
+    outline:none;
+    height:40px;
+    width:90vw;
+    margin-top:95px;
+    margin-bottom:25px;
+    margin-left:0;
+    margin-right:0;
+    padding:5px;
+    padding-top:0;
+    padding-bottom:0;
+    font-family:quicksand;
+    font-size:15px;
+}
+input[type="text"]::-webkit-search-cancel-button{
+    
+}
+#contact{
+    display:flex;
+    margin-bottom:20px;
+    cursor:pointer;
+    -webkit-tap-highlight-color:transparent ;
+}
+#contact>div{
+    display:inline-block ;
+}
+#dp{
+    height:50px;
+    width:50px;
+    border-radius:50%;
+    object-fit:cover;
+    cursor:pointer;
+    -webkit-tap-highlight-color:transparent ;
+}
+#contact #title{
+    font-size:17.5px;
+    font-weight:normal;
+    text-align:left;
+    text-overflow:ellipsis;
+    overflow-x:hidden;
+    white-space:nowrap;
+}
+#lmsg{
+    font-size:12.5px;
+}
+#contact #right{
+    margin-right:10px;
+    color:grey;
+    font-size:14px;
+}
+#ltime{
+    white-space:nowrap;
+    float:right;
+}
+.fa-check,.fa-check-double{
+    color:#0af;
+    -webkit-text-stroke:1px #f9f9fd;
+    margin-right:10px;
+}
+#unseen-num{
+    background:#0af;
+    display:inline-block ;
+    height:15px;
+    padding-right:5px;
+    padding-left:5px;
+    min-width:5px;
+    border-radius:15px;
+    font-size:10px;
+    color:white;
+    float:right;
+    margin-top:7.5px;
+}
+#large-dp{
+    height:35vw;
+    width:35vw;
+    border-radius:50%;
+    margin-top:30px;
+    margin-bottom:30px;
+    cursor:pointer;
+    -webkit-tap-highlight-color:transparent ;
+}
+#hr{
+    height:0.5px;
+    width:100%;
+    background:#eee;
+}
+#li{
+    padding-left:20px;
+    font-size:17.5px;
+    transition:0.5s;
+    cursor:pointer;
+    -webkit-tap-highlight-color:transparent ;
+}
+#li #fa{
+    display:inline-block ;
+    padding-right:10px;
+}
+.hide{
+    display:none;
+}
+.hsidebar{
+    margin-left:-75vw;
+}
+#profile{
+    height:100vh;
+    width:100vw;
+    overflow:scroll;
+    margin-bottom:20px;
+    position:fixed;
+    top:0;
+    left:0;
+    background:#f9f9fd;
+    z-index:6;
+}
+#prof-pic{
+    border-radius:50%;
+    margin-top:130px;
+    margin-bottom:50px;
+}
+#info{
+    padding-left:20px;
+}
+.info{
+    font-size:17.5px;
+}
+.label{
+    font-size:15px;
+    color:grey;
+    margin-top:2.5px;
+}
+#proflink-text{
+    color:#07f;
+    text-decoration:none;
+    cursor:pointer;
+    -webkit-tap-highlight-color:transparent ;
+}
+#profile .fa-arrow-left{
+    margin:20px;
+    font-size:20px;
+}
+#profile #heading{
+    justify-content:left;
+    font-size:22.5px;
+}
+#li:hover{
+    margin-left:20px;
+}
+#chat-sec{
+    position:fixed;
+    height:100vh;
+    width:100vw;
+    top:0;
+    left:0;
+    overflow:scroll;
+    background:#f9f9fd;
+    z-index:5;
+}
+#chat-sec #right{
+    margin-right:0;
+    margin-left:auto;
+}
+#chat-sec #left{
+    width:80vw;
+    justify-content:left;
+    font-weight:bold;
+    font-size:20px;
+}
+.fa-arrow-left{
+    cursor:pointer;
+    -webkit-tap-highlight-color:transparent ;
+}
+#chat-sec .fa-arrow-left{
+    margin-left:20px;
+}
+#chat-sec #dp{
+    height:50px;
+    width:50px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-left:20px;
+    margin-right:20px;
+}
+#chat-sec input[type="text"]{
+    position:fixed;
+    bottom:-25px;
+    width:77.5vw;
+    height:49px;
+    font-family:quicksand;
+    outline:none;
+    padding-left:2.5vw;
+    padding-right:2.5px;
+    border:0.5px solid #eee;
+}
+#send{
+    position:fixed;
+    bottom:0;
+    right:0;
+    width:20vw;
+    height:50px;
+    outline:none;
+    border:0.5px solid #eee;
+    background:#0af;
+    color:white;
+    font-size:30px;
+}
+#chat-sec #messages{
+    margin-top:100px;
+    margin-bottom:70px;
+}
+#nmsg,#mmsg{
+    height:fit-content;
+    width:fit-content;
+    max-width:60vw;
+    padding:7.5px;
+    margin:7.5px;
+    border-radius:10px;
+}
+#nmsg{
+    border-top-left-radius:0;
+    background:#e5e5e5;
+    color:black;
+}
+#mmsg{
+    margin-left:auto;
+    border-top-right-radius:0;
+    background:#0af;
+    color:white;
+}
+#chat-sec #options{
+    position:fixed;
+    top:50px;
+    background:#fff;
+    border:0.5px solid #eee;
+    padding:5px;
+    z-index:2;
+    border-radius:5px;
+    right:10vw;
+    transition-delay:2s;
+    display:none;
+}
+.options{
+    display:block !important;
+}
+#cont-loading{
+    height:100vh;
+    width:100vw;
+    background:rgba(0,0,0,0.5);
+    position:fixed;
+    top:0;
+    left:0;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:10;
+}
+.load{
+    display:flex !important;
+}
+#spin{
+    height:50px;
+    width:50px;
+    border-top:5px solid white;
+    border-radius:50%;
+    border-bottom:5px solid white;
+    border-right:5px solid transparent ;
+    border-left:5px solid transparent ;
+    animation:spin 1s linear infinite ;
+}
+@keyframes spin{
+    to{
+        transform:rotateZ(360deg);
+    }
+}
+#loading{
+    height:100vh;
+    width:100vw;
+    background:white;
+    position:fixed;
+    top:0;
+    left:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:11;
+    color:#0af;
+    font-size:75px;
+}
+.smallpic{
+    opacity:0;
+    transition:0.5s;
+}
